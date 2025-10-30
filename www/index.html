@@ -38,6 +38,9 @@
         $('#btnC').click(function(e) {
             btnCClick(e);
         });
+        $('#btnD').click(function(e) {
+            btnDClick(e);
+        });
         init();
     });
     
@@ -164,6 +167,7 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         $('#btnC').prop('disabled', false);
+        $('#btnD').prop('disabled', false);
         
     }
 
@@ -204,6 +208,11 @@
         period = 60* parseInt( $("#minute").val() ) + parseInt( $("#second").val() );
         $("#time").html("経過時間： 0");　
         $("#remain").html("残り時間： " + period);
+    }
+
+    function btnDClick(e){
+        location.reload();
+
         
     }
     
@@ -237,6 +246,7 @@
     <button id="btnA">始め</button>  
     <button id="btnB">終わり</button>  
     <button id="btnC">用意</button>  
+    <button id="btnD">リセット</button>
     <input type="number" id="minute" value=3 >
     <input type="number" id="second" value=0 >
 </body>
